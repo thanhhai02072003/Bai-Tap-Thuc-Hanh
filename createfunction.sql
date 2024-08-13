@@ -1,4 +1,3 @@
---2.1.a
 CREATE PROC [dbo].[proc_insert_food_and_drink]
    @LOAI VARCHAR(100) = NULL,
    @TEN VARCHAR(100) = NULL,
@@ -161,7 +160,7 @@ BEGIN
 END
 GO
 
---2.1.b
+------------------------------------------------
 CREATE PROC [dbo].[proc_update_food_and_drink]
    @TEN VARCHAR(100) = NULL,
    @GIA BIGINT = NULL,
@@ -214,8 +213,7 @@ BEGIN
 END
 GO
   
-
---2.1.c
+------------------------------------------------
 CREATE PROC [dbo].[proc_delete_food_and_drink]
    @TEN VARCHAR(100) = NULL
 AS
@@ -261,7 +259,7 @@ END
 GO
 
 
---2.2.a
+------------------------------------------------
 CREATE TRIGGER trig_insert_employee ON NHANVIEN
 FOR INSERT
 AS
@@ -291,7 +289,7 @@ BEGIN
 END
 GO
 
---2.2.b
+------------------------------------------------
 CREATE TRIGGER trig_total_cost_of_bill
 ON DONHANG_FD
 FOR INSERT, UPDATE, DELETE
@@ -368,7 +366,7 @@ BEGIN
 END
 GO
 
---2.3.a
+------------------------------------------------
 CREATE PROC proc_list_employee_of_room
    @SOPHONG VARCHAR(100) = NULL,
    @NGAYPHUCVU DATE = NULL
@@ -385,7 +383,7 @@ BEGIN
 END
 GO
 
---2.3.b
+------------------------------------------------
 CREATE PROC proc_bestseller_food
    @QUY INT = NULL,
    @NAM INT = NULL
@@ -409,7 +407,7 @@ BEGIN
 END
 GO
 
---2.4.a
+------------------------------------------------
 CREATE FUNCTION func_favorited_food
 (
    @TEN VARCHAR(100),
@@ -451,7 +449,7 @@ BEGIN
 END
 GO
 
---2.4.b
+------------------------------------------------
 CREATE FUNCTION func_revenue (@ngay INT, @thang INT, @nam INT)
 RETURNS VARCHAR(100)
 AS
